@@ -1,3 +1,5 @@
+import { HttpClient } from 'aurelia-fetch-client';
+
 export class App {
-  message = 'Hello World!';
+  message = 'More to come!';
 }
