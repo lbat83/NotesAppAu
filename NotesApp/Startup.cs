@@ -29,7 +29,7 @@ namespace NotesApp
       }
 
       app.UseDefaultFiles();
-      app.UseStaticFiles();
+      app.UseFileServer();
     }
   }
 }
