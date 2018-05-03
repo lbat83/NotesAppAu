@@ -1,13 +1,24 @@
-<!-- This is a global container. Everything else uses this behind it -->
-<template bindable="router">
-  <!-- File Imports-->
+
+<template>
+
   <require from="bootstrap/css/bootstrap.css"></require>
-  <require from="./app.css"></require>
-  <require from='./nav-bar/navbar'></require>
-  <require from='./footer/infofooter'></require>
-  <!-- Displays Navbar and binds router options to it -->
-  <nav-bar router.bind="router"></nav-bar>
+  
+  
+  
+  
+      <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="home">CSC 435 Notes App</a>
+            </div>
+              <li><a route-href="route: user">Users</a></li>
+              <li><a route-href="route: category">Categories</a></li>
+              <li><a route-href="route: notes">Notes</a></li>
+            </ul>
+          </div>
+        </nav>
+  </nav-bar>
   <router-view></router-view>
-  <!-- Displays footer -->
+  
   <infofooter></infofooter>
 </template>

@@ -1,0 +1,44 @@
+<template>
+ 
+  <div class='display'>
+  
+  
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700,700i" rel="stylesheet">
+  
+  
+  <div class="title"><div class="title-text">Category:</div></div>
+      <table class="table table-striped" aurelia-table="data.bind: category; display-data.bind: $displayCategory">
+          <thead>
+         
+          <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Options</th>
+          </tr>
+          </thead>
+          <tbody>
+        
+          <tr repeat.for="c of category">
+              <td>${c.id}</td>
+              <td>${c.name}</td>
+              <td>
+                  <button click.delegate = "deleteData(cat.id)">DELETE</button>
+              </td>
+          </tr>
+  
+         
+          <tr>
+              <td><span><input type="text" value.bind="newCat.id" placeholder="${index}" value="${index}"></span></td>
+              <td><span><input type="text" value.bind="newCat.name" placeholder="Name"></span></td>
+              <td>
+                  <button click.delegate = "putCat()">SUBMIT</button>
+              </td>
+          </tr>
+          </tbody>
+      </table>
+      <info></info>
+    </div>
+  </template>
+  

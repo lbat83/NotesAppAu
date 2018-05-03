@@ -1,0 +1,93 @@
+/* Global CSS file. Multiple pages pull style from this*/
+.display {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/* Tables on Users, Categories and Notes */
+.table {
+  background-color: #000000b2;
+  border-color: white;
+  border-style: double;
+  color: white;
+  table-layout: auto;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* rows and heads for above table */
+th, td {
+  border: 1px solid white;
+  width: 10px;
+}
+
+/* input boxes for above table */
+input[type=text], input[type=email] {
+  border-color: white;
+  border-style: double;
+  box-sizing: border-box;
+  color: red;
+  padding: 0px;
+  width: 100%;
+}
+
+/* buttons displayed in table above, and also in the "infotag" under the tables */
+button {
+  background-color: whitesmoke;
+  border-color: #000000b2;
+  border-style: double;
+  border-radius: 5px;
+  color: #000000b2;
+  font-weight: bold;
+  text-decoration: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+span {
+  display: block;
+  overflow: hidden;
+}
+
+
+.title {
+  background-color: #000000b2;
+  border-color: white;
+  border-style: double;
+}
+
+.title-text {
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-size: 25px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.home {
+  background-color: #000000b2; 
+  border-radius: 5px;
+  border-color: white;
+  border-style: double;
+}
+
+.home-text {
+  color: white;
+  text-indent: 1rem;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+hr { 
+  color: white;
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

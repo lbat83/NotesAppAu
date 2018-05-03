@@ -1,0 +1,67 @@
+<template>
+ 
+  <div class='display'>
+
+  
+ 
+  
+  
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700,700i" rel="stylesheet">
+
+  
+  <div class="title"><div class="title-text">Notes:</div></div>
+
+  
+  <table class="table table-striped" aurelia-table="data.bind: users; display-data.bind: $displayData">
+      <thead>
+      
+      <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Notes</th>
+          <th>Category</th>
+          <th>User</th>
+          <th>Created</th>
+          <th>Controls:</th>
+      </tr>
+      </thead>
+      <tbody>
+     
+      <tr repeat.for="note of notes">
+          <td>${n.id}</td>
+          <td>${n.title}</td>
+          <td>${n.note}</td>
+          <td>${n.category.name}</td>
+          <td>${n.user.name}</td>
+          <td>${n.createdOn.toLocaleString()}</td>
+          <td>
+              <button click.delegate = "deleteData(note.id)">DELETE</button>
+          </td>
+      </tr>
+     
+      <tr>
+          <td><span><input type="text" value.bind="newNote.id" placeholder="${index}" value="${index}"></span></td>
+          <td><span><input type="text" value.bind="newNote.title" placeholder="Title"></span></td>
+          <td><span><input type="text" value.bind="newNote.note" placeholder="Text..."></span></td>
+          <td>
+            <select value.bind="selectedCat">
+              <option model.bind="null">Choose Category...</option>
+              <option repeat.for="cat of cats" model.bind="cat.id">${cat.name}</option>
+            </select>
+          </td>
+          <td>
+            <select value.bind="selectedUsr">
+                <option model.bind="null">Choose Author...</option>
+                <option repeat.for="usr of users" model.bind="usr.id">${usr.name}</option>
+              </select>
+          </td>
+          <td>${now.toLocaleString()}</td>
+          <td>
+              <button click.delegate = "putNote()">SUBMIT</button>
+          </td>
+      </tr>
+      </tbody>
+  </table>
+  <info></info>
+</div>
+</template>

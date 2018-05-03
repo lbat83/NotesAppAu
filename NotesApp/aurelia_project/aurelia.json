@@ -81,11 +81,43 @@
             "env": "dev"
           },
           "text",
-          "scandir",
+          "jquery",
           {
             "name": "aurelia-fetch-client",
             "main": "aurelia-fetch-client",
             "path": "../node_modules/aurelia-fetch-client/dist/amd",
+            "resources": []
+          },
+          {
+            "name": "bootstrap",
+            "path": "../node_modules/bootstrap/dist",
+            "main": "js/bootstrap.min.js",
+            "deps": [
+              "jquery"
+            ],
+            "exports": "$",
+            "resources": [
+              "css/bootstrap.css"
+            ]
+          },
+          {
+            "name": "aurelia-http-client",
+            "main": "aurelia-http-client",
+            "path": "../node_modules/aurelia-http-client/dist/amd",
+            "resources": []
+          },
+          {
+            "name": "aurelia-table",
+            "main": "index",
+            "path": "../node_modules/aurelia-table/dist/amd",
+            "resources": [
+              "aurelia-table.css"
+            ]
+          },
+          {
+            "name": "aurelia-toolbelt",
+            "main": "index",
+            "path": "../node_modules/aurelia-toolbelt/dist/commonjs",
             "resources": []
           }
         ]
