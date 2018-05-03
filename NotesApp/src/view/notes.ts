@@ -25,7 +25,7 @@ export class notes {
   constructor(httpClient: HttpClient) {
     httpClient.configure(config => {
       config
-        .withBaseUrl('https://lbnotes.azurewebsites.net/api/')
+        .withBaseUrl('https://lbnotes2.azurewebsites.net/api/')
         .withDefaults({
           headers: {
             'Content-Type': 'application/json',
