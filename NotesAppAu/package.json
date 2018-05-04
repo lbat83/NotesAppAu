@@ -26,5 +26,8 @@
     "url-loader": "^0.5.8",
     "webpack": "^2.7.0",
     "webpack-hot-middleware": "^2.22.1"
+  },
+  "dependencies": {
+    "install-peerdeps": "^1.6.0"
   }
 }
